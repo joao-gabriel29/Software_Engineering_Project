@@ -49,3 +49,11 @@ class GerenciadorTarefas:
                     print(f"\n Parabéns, parceiro! Tarefa '{tarefa.titulo}' marcada como concluída. Menos um, hein?")
                 return
         print("\n Tarefa não encontrada, ta chapando?")
+
+    def deletar_tarefa(self, id_tarefa):
+        for tarefa in self.lista_tarefas:
+            if tarefa.id == id_tarefa:
+                self.lista_tarefas.remove(tarefa)
+                print(f"\n Tarefa '{tarefa.titulo}' excluída com sucesso e não falamos mais disso...")
+                return
+        print("\n Tarefa não encontrada.")
