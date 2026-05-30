@@ -1,13 +1,14 @@
 class Tarefa:
-    def __init__(self, id_tarefa, titulo, descricao):
-        self.id = id_tarefa
-        self.titulo = titulo
-        self.descricao = descricao
-        self.concluida = False  # <- Toda tarefa nova vai começar como Pendente
+       def __init__(self, id_tarefa, titulo, descricao, prioridade="Média"):
+           self.id = id_tarefa
+           self.titulo = titulo
+           self.descricao = descricao
+           self.prioridade = prioridade
+           self.concluida = False
 
-    def exibir(self):
-        status = "Concluída" if self.concluida else "Pendente"
-        print(f"ID: {self.id} | {self.titulo} - {self.descricao} [{status}]")
+       def exibir(self):
+           status = "Concluída" if self.concluida else "Pendente"
+           print(f"ID: {self.id} | [{self.prioridade}] {self.titulo} - {self.descricao} [{status}]")
 
 
 class GerenciadorTarefas:
