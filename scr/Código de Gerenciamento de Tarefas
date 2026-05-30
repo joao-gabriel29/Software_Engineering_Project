@@ -38,3 +38,14 @@ class GerenciadorTarefas:
         print("\n--- TAREFAS CONCLUÍDAS ---")
         for tarefa in tarefas_concluidas:
             tarefa.exibir()
+
+     def concluir_tarefa(self, id_tarefa):
+        for tarefa in self.lista_tarefas:
+            if tarefa.id == id_tarefa:
+                if tarefa.concluida:
+                    print("\n Esta tarefa já estava concluída!")
+                else:
+                    tarefa.concluida = True
+                    print(f"\n Parabéns, parceiro! Tarefa '{tarefa.titulo}' marcada como concluída. Menos um, hein?")
+                return
+        print("\n Tarefa não encontrada, ta chapando?")
