@@ -27,3 +27,14 @@ class GerenciadorTarefas:
         print("\n--- TODAS AS TAREFAS ---")
         for tarefa in self.lista_tarefas:
             tarefa.exibir()
+
+    def listar_concluidas(self):
+        tarefas_concluidas = [t for t in self.lista_tarefas if t.concluida]
+        
+        if not tarefas_concluidas:
+            print("\nNenhuma tarefa concluída até o momento.")
+            return
+        
+        print("\n--- TAREFAS CONCLUÍDAS ---")
+        for tarefa in tarefas_concluidas:
+            tarefa.exibir()
