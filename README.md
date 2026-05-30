@@ -11,4 +11,4 @@ Metodologia Adotada:
 O projeto foi gerenciado utilizando a metodologia ágil **Kanban**, com o apoio da ferramenta GitHub Projects para o rastreamento visual das atividades através das colunas: A Fazer, Em Progresso e Concluído.
 
 Gestão de Mudanças (Alteração de Escopo)
-Durante o ciclo de desenvolvimento, o cliente (startup de logística) identificou a necessidade crítica de categorizar o nível de urgência das entregas. O escopo original foi adaptado para incluir um campo de "Prioridade" (Alta, Média, Baixa) em cada tarefa, permitindo que a equipe foque primeiro nas demandas mais importantes.
+Durante o ciclo de desenvolvimento, o cliente "TechFlow Solutions" identificou a necessidade crítica de categorizar o nível de urgência das entregas. O escopo original foi adaptado para incluir um campo de "Prioridade" (Alta, Média, Baixa) em cada tarefa, permitindo que a equipe foque primeiro nas demandas mais importantes.
