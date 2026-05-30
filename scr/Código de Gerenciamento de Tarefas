@@ -9,6 +9,7 @@ class Tarefa:
         status = "Concluída" if self.concluida else "Pendente"
         print(f"ID: {self.id} | {self.titulo} - {self.descricao} [{status}]")
 
+
 class GerenciadorTarefas:
     def __init__(self):
         self.lista_tarefas = []
@@ -39,7 +40,7 @@ class GerenciadorTarefas:
         for tarefa in tarefas_concluidas:
             tarefa.exibir()
 
-     def concluir_tarefa(self, id_tarefa):
+    def concluir_tarefa(self, id_tarefa):
         for tarefa in self.lista_tarefas:
             if tarefa.id == id_tarefa:
                 if tarefa.concluida:
@@ -59,7 +60,7 @@ class GerenciadorTarefas:
         print("\n Tarefa não encontrada.")
 
 
-    def menu():
+def menu():
     gerenciador = GerenciadorTarefas()
     
     while True:
