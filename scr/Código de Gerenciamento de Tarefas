@@ -19,3 +19,11 @@ class GerenciadorTarefas:
         self.lista_tarefas.append(nova_tarefa)
         self.proximo_id += 1
         print("\nTarefa criada com sucesso, chefia!")
+
+    def listar_todas(self):
+        if not self.lista_tarefas:
+            print("\nNenhuma tarefa cadastrada.")
+            return
+        print("\n--- TODAS AS TAREFAS ---")
+        for tarefa in self.lista_tarefas:
+            tarefa.exibir()
