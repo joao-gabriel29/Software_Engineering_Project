@@ -57,3 +57,57 @@ class GerenciadorTarefas:
                 print(f"\n Tarefa '{tarefa.titulo}' excluída com sucesso e não falamos mais disso...")
                 return
         print("\n Tarefa não encontrada.")
+
+
+    def menu():
+    gerenciador = GerenciadorTarefas()
+    
+    while True:
+        print("\n==============================")
+        print("    TECHFLOW TASK MANAGER     ")
+        print("==============================")
+        print("1. Criar Nova Tarefa (Create)")
+        print("2. Listar Todas as Tarefas (Read)")
+        print("3. Ver Apenas Tarefas Concluídas")
+        print("4. Concluir uma Tarefa (Update)")
+        print("5. Excluir uma Tarefa (Delete)")
+        print("6. Sair do Sistema")
+        
+        opcao = input("\nEscolha uma opção (1-6): ")
+
+        if opcao == "1":
+            titulo = input("Digite o título da tarefa: ")
+            descricao = input("Digite a descrição da tarefa: ")
+            gerenciador.criar_tarefa(titulo, descricao)
+            
+        elif opcao == "2":
+            gerenciador.listar_todas()
+            
+        elif opcao == "3":
+            gerenciador.listar_concluidas()
+            
+        elif opcao == "4":
+            gerenciador.listar_todas()
+            try:
+                id_atualizar = int(input("\nDigite o ID da tarefa que deseja concluir: "))
+                gerenciador.concluir_tarefa(id_atualizar)
+            except ValueError:
+                print("\n Por favor, digite um número válido para o ID, cabeção.")
+                
+        elif opcao == "5":
+            gerenciador.listar_todas()
+            try:
+                id_deletar = int(input("\nDigite o ID da tarefa que deseja excluir: "))
+                gerenciador.deletar_tarefa(id_deletar)
+            except ValueError:
+                print("\n Por favor, digite um número válido para o ID.")
+                
+        elif opcao == "6":
+            print("\nFechando o sistema. Chega de trabalhar, irmão, não aguento mais essa miséria.")
+            break
+        else:
+            print("\n Opção inválida! Escolha um número de 1 a 6.")
+
+
+if __name__ == "__main__":
+    menu()
